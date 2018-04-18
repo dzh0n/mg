@@ -1,8 +1,8 @@
 document.addEventListener('deviceready', function(){
         window.monaca.isDeviceReady = true;
         monaca.apiQueue.next();
-        alert('sss');
-        //navigator.vibrate(3000);
+       
+        navigator.vibrate(3000);
     /*   navigator.notification.alert(
     'You are the winner!',  // message
     alertDismissed,         // callback
