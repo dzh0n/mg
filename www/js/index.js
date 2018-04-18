@@ -57,5 +57,10 @@ var app = {
 
 document.addEventListener("deviceready", function(){
    alert(navigator.connection.type);
+   cordova.plugins.notification.local.schedule({
+    title: 'My first notification',
+    text: 'Thats pretty easy...',
+    foreground: true
+});
 });
 
