@@ -58,8 +58,8 @@ var app = {
 document.addEventListener("deviceready", function(){
    alert(navigator.connection.type);
    cordova.plugins.notification.local.schedule({
-    title: 'My first notification',
-    text: 'Thats pretty easy...',
+    title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
+    text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
     foreground: true
 });
 });
