@@ -65,7 +65,7 @@ document.addEventListener("deviceready", function(){
 });
    cordova.plugins.notification.local.on("click", function (notification) {
         if (notification.id == 1021) {
-            alert(notification.data);
+            alert(notification.data.meetingId);
         }
     });
 });
