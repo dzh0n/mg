@@ -30,6 +30,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.markpoint.mg"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.markpoint.mg"
         }
     },
     "dependent_plugins": {}

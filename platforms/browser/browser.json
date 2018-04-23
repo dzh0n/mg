@@ -19,6 +19,10 @@
                         {
                             "xml": "<feature name=\"Badge\"><param name=\"browser-package\" value=\"Badge\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BackgroundMode\"><param name=\"browser-package\" value=\"BackgroundMode\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -94,6 +98,9 @@
         },
         "cordova-plugin-local-notification": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.markpoint.mg"
         }
     },
     "dependent_plugins": {},
@@ -1089,6 +1096,21 @@
                 "navigator.notification",
                 "navigator"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+            "id": "cordova-plugin-background-mode.BackgroundMode",
+            "pluginId": "cordova-plugin-background-mode",
+            "clobbers": [
+                "cordova.plugins.backgroundMode",
+                "plugin.backgroundMode"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-background-mode/src/browser/BackgroundModeProxy.js",
+            "id": "cordova-plugin-background-mode.BackgroundMode.Proxy",
+            "pluginId": "cordova-plugin-background-mode",
+            "runs": true
         }
     ],
     "plugin_metadata": {
@@ -1114,6 +1136,7 @@
         "cordova-plugin-whitelist": "1.2.2",
         "cordova-plugin-background-app": "2.0.2",
         "cordova-plugin-badge": "0.8.7",
-        "cordova-plugin-local-notification": "0.9.0-beta.3"
+        "cordova-plugin-local-notification": "0.9.0-beta.3",
+        "cordova-plugin-background-mode": "0.7.2"
     }
 }

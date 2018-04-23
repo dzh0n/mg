@@ -9,6 +9,9 @@
     <feature name="Badge">
         <param name="browser-package" value="Badge" />
     </feature>
+    <feature name="BackgroundMode">
+        <param name="browser-package" value="BackgroundMode" />
+    </feature>
     <name>MGApp</name>
     <description>
         Hello World sample application that responds to the deviceready event.
