@@ -61,7 +61,12 @@ var BackgroundFetch = window.BackgroundFetch;
 
 // Your background-fetch handler.
   var fetchCallback = function() {
-    alert('[js] BackgroundFetch event received');
+    cordova.plugins.notification.local.schedule({
+            id: 1021,
+            title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
+            text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
+            data: { meetingId:"#123FG8" } 
+        });
 
     // Required: Signal completion of your task to native code
     // If you fail to do this, the OS can terminate your app
