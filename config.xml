@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.markpoint.mg" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.markpoint.mg" version="1.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>MGApp</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -21,6 +21,7 @@
 <plugin name="cordova-plugin-vibration" spec="2.1.6" />
 <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
 <plugin name="cordova-plugin-background-mode"  />
+<plugin name="ccordova-plugin-background-service"  />
     
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />

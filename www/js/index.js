@@ -56,6 +56,22 @@ var app = {
 
 
 document.addEventListener("deviceready", function(){
+
+    window.BackgroundService.start(
+    function(fn) { function(){
+
+         setInterval(function () {
+           cordova.plugins.notification.local.schedule({
+            id: 1021,
+            title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
+            text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
+            data: { meetingId:"#123FG8" }
+        });
+       }, 30000);
+
+    }, fn && fn() },
+    function() { console.log('err') }
+);
     
 /*
      cordova.plugins.notification.local.schedule({
@@ -65,7 +81,7 @@ document.addEventListener("deviceready", function(){
             data: { meetingId:"#123FG8" } 
         });*/
 
-    cordova.plugins.backgroundMode.enable();
+    /*cordova.plugins.backgroundMode.enable();
     cordova.plugins.backgroundMode.on('activate', function () {
         setInterval(function () {
            cordova.plugins.notification.local.schedule({
@@ -83,6 +99,6 @@ document.addEventListener("deviceready", function(){
             //alert(notification.data.meetingId);
             cordova.plugins.backgroundMode.disable();
         }
-    });
+    });*/
 });
 
