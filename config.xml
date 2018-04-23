@@ -86,7 +86,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <platform name="android">
-        <resource-file src="src/android/BackgroundFetchHeadlessTask.java" target="src/com/transistorsoft/cordova/backgroundfetch/BackgroundFetchHeadlessTask.java" />
-    </platform>
+    
 </widget>
