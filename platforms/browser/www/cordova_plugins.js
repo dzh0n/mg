@@ -1006,6 +1006,14 @@ module.exports = [
         "id": "cordova-plugin-background-mode.BackgroundMode.Proxy",
         "pluginId": "cordova-plugin-background-mode",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-background-fetch/www/BackgroundFetch.js",
+        "id": "cordova-plugin-background-fetch.BackgroundFetch",
+        "pluginId": "cordova-plugin-background-fetch",
+        "clobbers": [
+            "window.BackgroundFetch"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -1034,7 +1042,8 @@ module.exports.metadata =
     "cordova-plugin-background-app": "2.0.2",
     "cordova-plugin-badge": "0.8.7",
     "cordova-plugin-local-notification": "0.9.0-beta.3",
-    "cordova-plugin-background-mode": "0.7.2"
+    "cordova-plugin-background-mode": "0.7.2",
+    "cordova-plugin-background-fetch": "5.3.0"
 }
 // BOTTOM OF METADATA
 });

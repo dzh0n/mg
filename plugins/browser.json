@@ -33,6 +33,9 @@
         },
         "cordova-plugin-background-mode": {
             "PACKAGE_NAME": "com.markpoint.mg"
+        },
+        "cordova-plugin-background-fetch": {
+            "PACKAGE_NAME": "com.markpoint.mg"
         }
     },
     "dependent_plugins": {}

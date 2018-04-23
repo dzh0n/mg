@@ -57,21 +57,28 @@ var app = {
 
 document.addEventListener("deviceready", function(){
 
-    window.BackgroundService.start(
-    function(fn) { function(){
+var BackgroundFetch = window.BackgroundFetch;
 
-         setInterval(function () {
-           cordova.plugins.notification.local.schedule({
-            id: 1021,
-            title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
-            text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
-            data: { meetingId:"#123FG8" }
-        });
-       }, 30000);
+// Your background-fetch handler.
+  var fetchCallback = function() {
+    alert('[js] BackgroundFetch event received');
 
-    }, fn && fn() },
-    function() { console.log('err') }
-);
+    // Required: Signal completion of your task to native code
+    // If you fail to do this, the OS can terminate your app
+    // or assign battery-blame for consuming too much background-time
+    BackgroundFetch.finish();
+  };
+
+  var failureCallback = function(error) {
+    alert('- BackgroundFetch failed', error);
+  };
+
+  BackgroundFetch.configure(fetchCallback, failureCallback, {
+    minimumFetchInterval: 1, // <-- default is 15
+    stopOnTerminate: false,   // <-- Android only
+    startOnBoot: true,        // <-- Android only
+    forceReload: true         // <-- Android only
+  });
     
 /*
      cordova.plugins.notification.local.schedule({
