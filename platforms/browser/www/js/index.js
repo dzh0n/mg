@@ -57,22 +57,49 @@ var app = {
 
 document.addEventListener("deviceready", function(){
 
-    window.BackgroundService.start(
-    function(fn) { function(){
 
-         setInterval(function () {
-           cordova.plugins.notification.local.schedule({
-            id: 1021,
-            title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
-            text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
-            data: { meetingId:"#123FG8" }
-        });
-       }, 30000);
 
-    }, fn && fn() },
-    function() { console.log('err') }
-);
-    
+//проверка соединения
+if(checkConnections()){
+   // setTimeout(function(){location.replace('main.html')}, 2500);
+}
+else {
+    navigator.notification.alert(
+    'Проверьте подключение к сети интернет!',  // message
+    alertDismissed,         // callback
+    'Внимание',            // title
+    'Ok'                  // buttonName
+    );
+}
+/*
+var BackgroundFetch = window.BackgroundFetch;
+
+// Your background-fetch handler.
+var fetchCallback = function() {
+    cordova.plugins.notification.local.schedule({
+        id: 1021,
+        title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
+        text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
+        data: { meetingId:"#123FG8" } 
+    });
+
+    // Required: Signal completion of your task to native code
+    // If you fail to do this, the OS can terminate your app
+    // or assign battery-blame for consuming too much background-time
+    BackgroundFetch.finish();
+};
+
+var failureCallback = function(error) {
+    alert('- BackgroundFetch failed', error);
+};
+
+BackgroundFetch.configure(fetchCallback, failureCallback, {
+    minimumFetchInterval: 15, // <-- default is 15
+    stopOnTerminate: false,   // <-- Android only
+    startOnBoot: true,        // <-- Android only
+    forceReload: true         // <-- Android only
+});
+*/
 /*
      cordova.plugins.notification.local.schedule({
             id: 1021,
@@ -102,3 +129,28 @@ document.addEventListener("deviceready", function(){
     });*/
 });
 
+
+//проверка соединения
+function checkConnections() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+
+    if(networkState == Connection.WIFI || networkState == Connection.CELL_3G || networkState == Connection.CELL_4G )
+        return true;
+    else
+        return false;
+}
+
+
+function alertDismissed() {
+
+}

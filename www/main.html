@@ -27,15 +27,39 @@
 
 <body>
 
-    <div class="main-activity">
-        <div class="main-logo"><img src="img/mg.png"></div>
-        <div class="main-label">МГ Заявки</div>
+    <div class="nav-bar">
+        <!--<div class="nav-bar-left"><a href="index.html"><i class="fas fa-bars"></i></a></div>-->
+        <div class="nav-bar-caption">МГ Заявки</div>
+        <div class="nav-bar-right"><a href="notifications.html" class="count-notif"><i class="far fa-bell"></i><div>7</div></a></div>
     </div>
-    <div class="copyright">2018 &copy; Мужичок-грузовичок.рф</div>
+    
+   <div class="page-content">
+       
+       <div class="region-list">
+           <div class="region-list-item">
+               <div class="region-list-item-title"><i class="far fa-folder"></i> Республика Башкортостан</div><div class="region-list-item-counter">12</div>
+               <div class="region-list-item-sublist">
+                   <ul>
+                       
+                       <li><span>Заявки на перевозку грузов</span><span>6</span></li>
+                       <li><span>Заявки на работу спецтехники</span><span>3</span></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="region-list-item">
+               <div class="region-list-item-title"><i class="far fa-folder"></i> Республика Татарстан</div><div class="region-list-item-counter">7</div>
+           </div>
+           <div class="region-list-item">
+               <div class="region-list-item-title"><i class="far fa-folder"></i> Нижегородская область</div><div class="region-list-item-counter">3</div>
+           </div>
+       </div>
+
+   </div>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/main.js"></script> 
     <script type="text/javascript">
         app.initialize(); 
     </script>
