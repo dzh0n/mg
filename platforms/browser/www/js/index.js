@@ -61,7 +61,7 @@ document.addEventListener("deviceready", function(){
 
 //проверка соединения
 if(checkConnections()){
-   // setTimeout(function(){location.replace('main.html')}, 2500);
+    setTimeout(function(){location.replace('main.html')}, 2500);
 }
 else {
     navigator.notification.alert(
