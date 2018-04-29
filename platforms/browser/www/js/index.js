@@ -18,7 +18,7 @@
  */
 
 var pageName = 'index';
-var sharedPreferences = window.plugins.SharedPreferences.getInstance('settings');
+var storage = window.localStorage;
 
 var app = {
     // Application Constructor
@@ -59,14 +59,10 @@ var app = {
 
 document.addEventListener("deviceready", function(){
 
-
 //проверка соединения
 if(checkConnections()){
     setTimeout(function(){
       if(pageName == 'index') {
-
-        sharedPreferences.get('phone', function(value){alert(value)}, function(err){alert(err)});
-
         ref = window.open('main.html', '_self');
       }
     }, 2500);
@@ -79,6 +75,14 @@ else {
     'Ok'                  // buttonName
     );
 }
+/*storage.removeItem('phone');
+alert(storage.getItem('phone'));*/
+//Если вошли впревый раз - нет сохраненного телефона, отправляем в настройки
+if(storage.getItem('settings_phone')==null && pageName != 'settings' && pageName != 'index') {
+  //ref = window.open('settings.html', '_self');
+}
+
+
 /*
 var BackgroundFetch = window.BackgroundFetch;
 

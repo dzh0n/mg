@@ -1022,6 +1022,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.SharedPreferences"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+        "id": "cordova-plugin-x-toast.Toast",
+        "pluginId": "cordova-plugin-x-toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -1052,7 +1060,8 @@ module.exports.metadata =
     "cordova-plugin-local-notification": "0.9.0-beta.3",
     "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-background-fetch": "5.3.0",
-    "cordova-plugin-awesome-shared-preferences": "0.1.0"
+    "cordova-plugin-awesome-shared-preferences": "0.1.0",
+    "cordova-plugin-x-toast": "2.6.2"
 }
 // BOTTOM OF METADATA
 });

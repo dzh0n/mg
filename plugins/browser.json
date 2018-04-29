@@ -39,6 +39,9 @@
         },
         "cordova-plugin-awesome-shared-preferences": {
             "PACKAGE_NAME": "com.markpoint.mg"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.markpoint.mg"
         }
     },
     "dependent_plugins": {}

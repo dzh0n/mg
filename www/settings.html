@@ -31,8 +31,7 @@
         <div class="nav-bar-left"><a href="#" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></a></div>
         <div class="nav-bar-caption">Настройки</div>
         <div class="nav-bar-right">
-          <!--<a href="notifications.html" class="count-notif"><i class="far fa-bell"></i><div>7</div></a>
-          <a href="settings.html"><i class="fas fa-sliders-h"></i></a>-->
+          <a href="javascript:;" id="save_settings"><i class="far fa-save"></i></a>
         </div>
     </div>
 
@@ -42,11 +41,11 @@
          <form>
            <div class="form-row">
              <label>Фамилия и Имя</label>
-             <input type="tel" name="phone"  value="">
+             <input type="text" id="settings_fio" name="fio"  value="">
            </div>
            <div class="form-row">
              <label>Номер телефона</label>
-               <input type="tel" name="phone" placeholder=""  value="">
+               <input type="tel" id="settings_phone" name="phone" placeholder=""  value="">
            </div>
          </form>
        </div>

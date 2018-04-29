@@ -124,14 +124,16 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     text-decoration: none;
     position: relative;
 }
-.nav-bar-right, .nav-bar-right a{
+.nav-bar-right, .nav-bar-right a {
     color: #fcfcfc;
-    width: 2rem;
+    *width: 2rem;
     text-decoration: none;
     position: relative;
-    margin-right: 1.5rem;
+    *margin-right: 1.5rem;
 }
-
+.nav-bar-right a:last-child {
+  margin-left: 1.5rem;
+}
 .nav-bar-right {
   display: inline-flex;
   justify-content: space-between;
@@ -231,7 +233,7 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
   margin-bottom: 0.3rem;
   display: block;
 }
-.setting-form .form-row input[type='tel'] {
+.setting-form .form-row input[type='tel'], .setting-form .form-row input[type='text'] {
   border: #9c9c9c 1px solid;
   display: block;
   width: 100%;
