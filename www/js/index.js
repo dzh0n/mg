@@ -75,11 +75,10 @@ else {
     'Ok'                  // buttonName
     );
 }
-/*storage.removeItem('phone');
-alert(storage.getItem('phone'));*/
+
 //Если вошли впревый раз - нет сохраненного телефона, отправляем в настройки
 if(storage.getItem('settings_phone')==null && pageName != 'settings' && pageName != 'index') {
-  //ref = window.open('settings.html', '_self');
+  ref = window.open('settings.html', '_self');
 }
 
 
