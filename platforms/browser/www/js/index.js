@@ -18,7 +18,7 @@
  */
 
 var pageName = 'index';
-//var sharedPreferences = window.plugins.SharedPreferences.getInstance();
+var sharedPreferences = window.plugins.SharedPreferences.getInstance('settings');
 
 var app = {
     // Application Constructor
@@ -59,14 +59,13 @@ var app = {
 
 document.addEventListener("deviceready", function(){
 
-var sharedPreferences = window.plugins.SharedPreferences.getInstance();
+
 //проверка соединения
 if(checkConnections()){
     setTimeout(function(){
       if(pageName == 'index') {
 
-alert('d');
-      //  sharedPreferences.get('phone', successCallback, errorCallback);
+        sharedPreferences.get('phone', function(value){alert(value)}, function(err){alert(err)});
 
         ref = window.open('main.html', '_self');
       }
