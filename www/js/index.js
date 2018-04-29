@@ -18,6 +18,7 @@
  */
 
 var pageName = 'index';
+//var sharedPreferences = window.plugins.SharedPreferences.getInstance();
 
 var app = {
     // Application Constructor
@@ -58,12 +59,17 @@ var app = {
 
 document.addEventListener("deviceready", function(){
 
-
+var sharedPreferences = window.plugins.SharedPreferences.getInstance();
 //проверка соединения
 if(checkConnections()){
     setTimeout(function(){
-      if(pageName == 'index')
+      if(pageName == 'index') {
+
+alert('d');
+      //  sharedPreferences.get('phone', successCallback, errorCallback);
+
         ref = window.open('main.html', '_self');
+      }
     }, 2500);
 }
 else {
