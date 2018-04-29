@@ -1014,6 +1014,14 @@ module.exports = [
         "clobbers": [
             "window.BackgroundFetch"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-awesome-shared-preferences/www/index.js",
+        "id": "cordova-plugin-awesome-shared-preferences.SharedPreferences",
+        "pluginId": "cordova-plugin-awesome-shared-preferences",
+        "clobbers": [
+            "window.plugins.SharedPreferences"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -1043,7 +1051,8 @@ module.exports.metadata =
     "cordova-plugin-badge": "0.8.7",
     "cordova-plugin-local-notification": "0.9.0-beta.3",
     "cordova-plugin-background-mode": "0.7.2",
-    "cordova-plugin-background-fetch": "5.3.0"
+    "cordova-plugin-background-fetch": "5.3.0",
+    "cordova-plugin-awesome-shared-preferences": "0.1.0"
 }
 // BOTTOM OF METADATA
 });

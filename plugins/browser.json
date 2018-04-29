@@ -36,6 +36,9 @@
         },
         "cordova-plugin-background-fetch": {
             "PACKAGE_NAME": "com.markpoint.mg"
+        },
+        "cordova-plugin-awesome-shared-preferences": {
+            "PACKAGE_NAME": "com.markpoint.mg"
         }
     },
     "dependent_plugins": {}

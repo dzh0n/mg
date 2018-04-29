@@ -28,33 +28,27 @@
 <body>
 
     <div class="nav-bar">
-        <!--<div class="nav-bar-left"><a href="index.html"><i class="fas fa-bars"></i></a></div>-->
-        <div class="nav-bar-caption">МГ Заявки</div>
+        <div class="nav-bar-left"><a href="#" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></a></div>
+        <div class="nav-bar-caption">Настройки</div>
         <div class="nav-bar-right">
-          <a href="notifications.html" class="count-notif"><i class="far fa-bell"></i><div>7</div></a>
-          <a href="settings.html"><i class="fas fa-sliders-h"></i></a>
+          <!--<a href="notifications.html" class="count-notif"><i class="far fa-bell"></i><div>7</div></a>
+          <a href="settings.html"><i class="fas fa-sliders-h"></i></a>-->
         </div>
     </div>
 
    <div class="page-content">
 
-       <div class="region-list">
-           <div class="region-list-item">
-               <div class="region-list-item-title"><i class="far fa-folder"></i> Республика Башкортостан</div><div class="region-list-item-counter">12</div>
-               <div class="region-list-item-sublist">
-                   <ul>
-
-                       <li><span>Конкурсы на перевозку грузов</span><span>6</span></li>
-                       <li><span>Конкурсы на работу спецтехники</span><span>3</span></li>
-                   </ul>
-               </div>
+       <div class="setting-form">
+         <form>
+           <div class="form-row">
+             <label>Фамилия и Имя</label>
+             <input type="tel" name="phone"  value="">
            </div>
-           <div class="region-list-item">
-               <div class="region-list-item-title"><i class="far fa-folder"></i> Республика Татарстан</div><div class="region-list-item-counter">7</div>
+           <div class="form-row">
+             <label>Номер телефона</label>
+               <input type="tel" name="phone" placeholder=""  value="">
            </div>
-           <div class="region-list-item">
-               <div class="region-list-item-title"><i class="far fa-folder"></i> Нижегородская область</div><div class="region-list-item-counter">3</div>
-           </div>
+         </form>
        </div>
 
    </div>
@@ -65,7 +59,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript">
         app.initialize();
-        pageName = 'main';
+        pageName = 'settings';
     </script>
 </body>
 

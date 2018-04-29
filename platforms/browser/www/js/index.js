@@ -17,6 +17,7 @@
  * under the License.
  */
 
+var pageName = 'index';
 
 var app = {
     // Application Constructor
@@ -36,7 +37,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        
+
         //navigator.vibrate([1000, 1000, 3000, 1000, 2000]);
     },
     // Update DOM on a Received Event
@@ -48,7 +49,7 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);   
+        console.log('Received Event: ' + id);
     }
 };
 
@@ -58,10 +59,12 @@ var app = {
 document.addEventListener("deviceready", function(){
 
 
-
 //проверка соединения
 if(checkConnections()){
-    setTimeout(function(){location.replace('main.html')}, 2500);
+    setTimeout(function(){
+      if(pageName == 'index')
+        ref = window.open('main.html', '_self');
+    }, 2500);
 }
 else {
     navigator.notification.alert(
@@ -80,7 +83,7 @@ var fetchCallback = function() {
         id: 1021,
         title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
         text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
-        data: { meetingId:"#123FG8" } 
+        data: { meetingId:"#123FG8" }
     });
 
     // Required: Signal completion of your task to native code
@@ -105,7 +108,7 @@ BackgroundFetch.configure(fetchCallback, failureCallback, {
             id: 1021,
             title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
             text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
-            data: { meetingId:"#123FG8" } 
+            data: { meetingId:"#123FG8" }
         });*/
 
     /*cordova.plugins.backgroundMode.enable();

@@ -27,7 +27,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-   
+
     font-family: 'Blogger Sans';
     font-size:12px;
     height:100%;
@@ -39,7 +39,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
-   
+
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:50%;
@@ -109,9 +109,9 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     position: fixed;
-    width: 100%;    
+    width: 100%;
     box-sizing: border-box;
     z-index: 100;
     background-color: #474747;
@@ -119,7 +119,7 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     height: 4rem;
 }
 .nav-bar-left, .nav-bar-left a {
-    color: #fcfcfc; 
+    color: #fcfcfc;
     width: 2rem;
     text-decoration: none;
     position: relative;
@@ -129,6 +129,12 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     width: 2rem;
     text-decoration: none;
     position: relative;
+    margin-right: 1.5rem;
+}
+
+.nav-bar-right {
+  display: inline-flex;
+  justify-content: space-between;
 }
 .nav-bar-caption {
     font-weight: 500;
@@ -136,7 +142,7 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 .count-notif div {
-    text-align: center;    
+    text-align: center;
     background-color: red;
     color: #fff;
     font-size: 12px;
@@ -144,7 +150,7 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     height: 18px;
     line-height: 22px;
     border-radius: 50%;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     right: 0;
@@ -162,7 +168,7 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     flex-direction: column;
 }
 .region-list-item {
-    
+
     font-size: 1.25rem;
     font-weight: 400;
     border-bottom: #F0F0F0 1px solid;
@@ -180,7 +186,7 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
     font-size: 0.9rem;
     font-weight: 500;
     padding: 1.25rem 1rem 1.25rem 0rem;
-    
+
     color: #A1A1A1;
 }
 .region-list-item.active .region-list-item-title i {
@@ -213,6 +219,30 @@ box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 
+.setting-form {
+
+}
+.setting-form .form-row {
+  padding: 1.5rem 1.5rem 0;
+}
+.setting-form .form-row label {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.setting-form .form-row input[type='tel'] {
+  border: #9c9c9c 1px solid;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-family: 'Blogger Sans';
+  *font-weight: 500;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.5rem 0.4rem;
+  line-height: 1;
+}
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
@@ -256,13 +286,13 @@ h1 {
     50% { opacity: 0.5; }
     to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
