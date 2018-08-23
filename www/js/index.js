@@ -81,14 +81,19 @@ if(storage.getItem('settings_phone')==null && pageName != 'settings' && pageName
   ref = window.open('settings.html', '_self');
 }
 
-
+cordova.plugins.notification.local.schedule({
+          id: 1022,
+          title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
+          text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
+          data: { meetingId:"#123FG8" }
+      });
 
 var BackgroundFetch = window.BackgroundFetch;
 
 // Your background-fetch handler.
 var fetchCallback = function() {
   cordova.plugins.notification.local.schedule({
-            id: 1022,
+            id: 1024,
             title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
             text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
             data: { meetingId:"#123FG8" }

@@ -10,6 +10,7 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Fullscreen" value="true" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
    <preference name="android-minSdkVersion" value="16" />
    <plugin name="cordova-plugin-device" spec="1.1.7" />
    <plugin name="cordova-plugin-dialogs" spec="1.2.1" />
