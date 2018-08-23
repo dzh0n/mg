@@ -82,7 +82,7 @@ if(storage.getItem('settings_phone')==null && pageName != 'settings' && pageName
 }
 
 
-/*
+
 var BackgroundFetch = window.BackgroundFetch;
 
 // Your background-fetch handler.
@@ -97,7 +97,7 @@ var fetchCallback = function() {
     // Required: Signal completion of your task to native code
     // If you fail to do this, the OS can terminate your app
     // or assign battery-blame for consuming too much background-time
-    BackgroundFetch.finish();
+  //  BackgroundFetch.finish();
 };
 
 var failureCallback = function(error) {
@@ -109,7 +109,7 @@ BackgroundFetch.configure(fetchCallback, failureCallback, {
     stopOnTerminate: false,   // <-- Android only
     startOnBoot: true,        // <-- Android only
     forceReload: true         // <-- Android only
-});*/
+});
 
 
   /*   cordova.plugins.notification.local.schedule({
@@ -118,7 +118,9 @@ BackgroundFetch.configure(fetchCallback, failureCallback, {
             text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
             data: { meetingId:"#123FG8" }
         });*/
-        cordova.plugins.backgroundMode.configure({ silent: true });
+
+
+  /*      cordova.plugins.backgroundMode.configure({ silent: true });
     cordova.plugins.backgroundMode.enable();
     cordova.plugins.backgroundMode.on('activate', function () {
         setInterval(function () {
@@ -137,7 +139,7 @@ BackgroundFetch.configure(fetchCallback, failureCallback, {
             //alert(notification.data.meetingId);
             cordova.plugins.backgroundMode.disable();
         }
-    });
+    });*/
 });
 
 
