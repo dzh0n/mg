@@ -118,7 +118,7 @@ BackgroundFetch.configure(fetchCallback, failureCallback, {
             text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
             data: { meetingId:"#123FG8" }
         });*/
-
+        cordova.plugins.backgroundMode.configure({ silent: true });
     cordova.plugins.backgroundMode.enable();
     cordova.plugins.backgroundMode.on('activate', function () {
         setInterval(function () {
