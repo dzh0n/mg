@@ -110,7 +110,7 @@ var failureCallback = function(error) {
 };
 
 BackgroundFetch.configure(fetchCallback, failureCallback, {
-    minimumFetchInterval: 15, // <-- default is 15
+    minimumFetchInterval: 2, // <-- default is 15
     stopOnTerminate: false,   // <-- Android only
     startOnBoot: true,        // <-- Android only
     forceReload: true         // <-- Android only
