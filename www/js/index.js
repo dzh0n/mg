@@ -81,37 +81,24 @@ if(storage.getItem('settings_phone')==null && pageName != 'settings' && pageName
   ref = window.open('settings.html', '_self');
 }
 
-cordova.plugins.notification.local.schedule({
-          id: 1022,
-          title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
-          text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
-          data: { meetingId:"#123FG8" }
-      });
+
 
 var BackgroundFetch = window.BackgroundFetch;
 
 // Your background-fetch handler.
 var fetchCallback = function() {
-  cordova.plugins.notification.local.schedule({
-            id: 1024,
-            title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
-            text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
-            data: { meetingId:"#123FG8" }
-        });
 
+  $.get('ajax/test.html', function(data) {
+    
+  });
     // Required: Signal completion of your task to native code
     // If you fail to do this, the OS can terminate your app
     // or assign battery-blame for consuming too much background-time
-  //  BackgroundFetch.finish();
+    BackgroundFetch.finish();
 };
 
 var failureCallback = function(error) {
-  cordova.plugins.notification.local.schedule({
-            id: 1022,
-            title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
-            text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
-            data: { meetingId:"#123FG8" }
-        });
+
 };
 
 BackgroundFetch.configure(fetchCallback, failureCallback, {
