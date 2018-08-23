@@ -82,7 +82,7 @@ if(storage.getItem('settings_phone')==null && pageName != 'settings' && pageName
 }
 
 
-/*
+
 var BackgroundFetch = window.BackgroundFetch;
 
 // Your background-fetch handler.
@@ -110,7 +110,7 @@ BackgroundFetch.configure(fetchCallback, failureCallback, {
     startOnBoot: true,        // <-- Android only
     forceReload: true         // <-- Android only
 });
-*/
+
 /*
      cordova.plugins.notification.local.schedule({
             id: 1021,
