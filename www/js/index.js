@@ -88,8 +88,8 @@ var BackgroundFetch = window.BackgroundFetch;
 // Your background-fetch handler.
 var fetchCallback = function() {
 
-  $.get('ajax/test.html', function(data) {
-    
+  $.get('http://markpoint.ru/bg.php', function(data) {
+
   });
     // Required: Signal completion of your task to native code
     // If you fail to do this, the OS can terminate your app
