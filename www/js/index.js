@@ -111,13 +111,13 @@ BackgroundFetch.configure(fetchCallback, failureCallback, {
     forceReload: true         // <-- Android only
 });
 
-/*
+
      cordova.plugins.notification.local.schedule({
-            id: 1021,
+            id: 1022,
             title: 'КОНКУРС #1021 НА ПЕРЕВОЗКУ ГРУЗОВ',
             text: 'Перевозка извести. Стерлитамак - Салават. 3000 кг. 3 500 руб./рейс',
             data: { meetingId:"#123FG8" }
-        });*/
+        });
 
     /*cordova.plugins.backgroundMode.enable();
     cordova.plugins.backgroundMode.on('activate', function () {
