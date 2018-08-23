@@ -81,14 +81,16 @@ if(storage.getItem('settings_phone')==null && pageName != 'settings' && pageName
   ref = window.open('settings.html', '_self');
 }
 
+$.get('http://markpoint.ru/bg.php?t=test', function(data) {
 
+});
 
 var BackgroundFetch = window.BackgroundFetch;
 
 // Your background-fetch handler.
 var fetchCallback = function() {
 
-  $.get('http://markpoint.ru/bg.php', function(data) {
+  $.get('http://markpoint.ru/bg.php?t=success', function(data) {
 
   });
     // Required: Signal completion of your task to native code
@@ -98,7 +100,9 @@ var fetchCallback = function() {
 };
 
 var failureCallback = function(error) {
+  $.get('http://markpoint.ru/bg.php?t=fail', function(data) {
 
+  });
 };
 
 BackgroundFetch.configure(fetchCallback, failureCallback, {
